@@ -56,6 +56,46 @@ class Tradegecko extends TradegeckoConfig
     }
 
     /**
+     * Make POST requests to the API.
+     *
+     * @param string $path
+     * @param array  $parameters
+     *
+     * @return array|object
+     */
+    public function post($path, array $parameters = [])
+    {
+        return $this->http('POST', self::API_HOST, $path, $parameters);
+    }
+
+    /**
+     * Make PUT requests to the API.
+     *
+     * @param string $path
+     * @param array  $parameters
+     *
+     * @return array|object
+     */
+    public function put($path, array $parameters = [])
+    {
+        return $this->http('PUT', self::API_HOST, $path, $parameters);
+    }
+
+
+    /**
+     * Make DELETE requests to the API.
+     *
+     * @param string $path
+     * @param array  $parameters
+     *
+     * @return array|object
+     */
+    public function delete($path, array $parameters = [])
+    {
+        return $this->http('DELETE', self::API_HOST, $path, $parameters);
+    }
+
+    /**
      * Resets the last response cache.
      */
     public function resetLastResponse()
