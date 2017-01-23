@@ -17,5 +17,7 @@ trait Address
         if(isset($return->type) && ($return->type == 'Bad Request')) {
             throw new TradegeckoException((string) $return->message);
         }
+
+        return $return;
     }
 }
