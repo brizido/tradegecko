@@ -4,12 +4,14 @@ namespace Brizido\Tradegecko;
 
 use Brizido\Tradegecko\Domain\Account;
 use Brizido\Tradegecko\Domain\Address;
+use Brizido\Tradegecko\Domain\Company;
 
 class Tradegecko extends TradegeckoConfig
 {
 
     use Account;
     use Address;
+    use Company;
 
     const API_HOST = 'https://api.tradegecko.com';
 
