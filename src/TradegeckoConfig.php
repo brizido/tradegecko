@@ -4,8 +4,8 @@ namespace Brizido\Tradegecko;
 
 abstract class TradegeckoConfig
 {
-    protected $timeout = 5;
-    protected $connectionTimeout = 5;
+    protected $timeout = 50;
+    protected $connectionTimeout = 50;
     protected $decodeJsonAsArray = false;
     protected $gzipEncoding = true;
 }
