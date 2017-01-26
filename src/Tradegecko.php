@@ -5,6 +5,7 @@ namespace Brizido\Tradegecko;
 use Brizido\Tradegecko\Domain\Account;
 use Brizido\Tradegecko\Domain\Address;
 use Brizido\Tradegecko\Domain\Company;
+use Brizido\Tradegecko\Domain\Order;
 
 class Tradegecko extends TradegeckoConfig
 {
