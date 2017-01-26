@@ -8,6 +8,7 @@ use Brizido\Tradegecko\Domain\Company;
 use Brizido\Tradegecko\Domain\Order;
 use Brizido\Tradegecko\Domain\OrderLineItem;
 use Brizido\Tradegecko\Domain\Variant;
+use Brizido\Tradegecko\Domain\TaxType;
 
 class Tradegecko extends TradegeckoConfig
 {
@@ -18,6 +19,7 @@ class Tradegecko extends TradegeckoConfig
     use Order;
     use OrderLineItem;
     use Variant;
+    use TaxType;
 
     const API_HOST = 'https://api.tradegecko.com';
 
