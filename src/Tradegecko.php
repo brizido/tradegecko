@@ -12,6 +12,7 @@ class Tradegecko extends TradegeckoConfig
     use Account;
     use Address;
     use Company;
+    use Order;
 
     const API_HOST = 'https://api.tradegecko.com';
 
