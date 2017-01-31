@@ -4,6 +4,16 @@ namespace Brizido\Tradegecko\Domain;
 
 trait Variant
 {
+    public function addVariant($fields = [])
+    {
+        $return = $this->post('variants', array('variant' => $fields));
+        if(isset($return->type) && ($return->type == 'Bad Request')) {
+            throw new TradegeckoException((string) $return->message);
+        }
+
+        return $return;
+    }
+
     public function getVariantBySku($sku)
     {
         $return = $this->get('variants', array('sku' => $sku));
