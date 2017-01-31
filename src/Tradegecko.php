@@ -9,6 +9,7 @@ use Brizido\Tradegecko\Domain\Order;
 use Brizido\Tradegecko\Domain\OrderLineItem;
 use Brizido\Tradegecko\Domain\Variant;
 use Brizido\Tradegecko\Domain\TaxType;
+use Brizido\Tradegecko\Domain\Product;
 
 class Tradegecko extends TradegeckoConfig
 {
