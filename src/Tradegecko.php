@@ -20,6 +20,7 @@ class Tradegecko extends TradegeckoConfig
     use OrderLineItem;
     use Variant;
     use TaxType;
+    use Product;
 
     const API_HOST = 'https://api.tradegecko.com';
 
