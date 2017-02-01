@@ -2,6 +2,8 @@
 
 namespace Brizido\Tradegecko\Domain;
 
+use Brizido\Tradegecko\TradegeckoException;
+
 trait Product
 {
     public function addProduct($fields = [])

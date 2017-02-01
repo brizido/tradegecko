@@ -2,6 +2,8 @@
 
 namespace Brizido\Tradegecko\Domain;
 
+use Brizido\Tradegecko\TradegeckoException;
+
 trait StockAdjustment
 {
     public function addStockAdjustment($fields = [])
