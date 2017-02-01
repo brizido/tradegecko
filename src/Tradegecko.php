@@ -10,6 +10,7 @@ use Brizido\Tradegecko\Domain\OrderLineItem;
 use Brizido\Tradegecko\Domain\Variant;
 use Brizido\Tradegecko\Domain\TaxType;
 use Brizido\Tradegecko\Domain\Product;
+use Brizido\Tradegecko\Domain\StockAdjustment;
 
 class Tradegecko extends TradegeckoConfig
 {
@@ -22,6 +23,7 @@ class Tradegecko extends TradegeckoConfig
     use Variant;
     use TaxType;
     use Product;
+    use StockAdjustment;
 
     const API_HOST = 'https://api.tradegecko.com';
 
