@@ -12,6 +12,7 @@ use Brizido\Tradegecko\Domain\TaxType;
 use Brizido\Tradegecko\Domain\Product;
 use Brizido\Tradegecko\Domain\StockAdjustment;
 use Brizido\Tradegecko\Domain\StockAdjustmentLineItem;
+use Brizido\Tradegecko\Domain\RateLimit;
 
 class Tradegecko extends TradegeckoConfig
 {
@@ -26,6 +27,7 @@ class Tradegecko extends TradegeckoConfig
     use Product;
     use StockAdjustment;
     use StockAdjustmentLineItem;
+    use RateLimit;
 
     const API_HOST = 'https://api.tradegecko.com';
 
@@ -59,7 +61,7 @@ class Tradegecko extends TradegeckoConfig
     }
 
     /**
-     * Make GET requests to the API.
+     * Make GET reresponsequests to the API.
      *
      * @param string $path
      * @param array  $parameters
