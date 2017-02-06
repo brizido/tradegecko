@@ -14,8 +14,10 @@ trait RateLimit
         }
 
         $headers = $this->response->getXHeaders();
-        var_dump($headers);
-
+        if(isset($headers['x_rate_limit_remaining'])) {
+            return intval($headers['x_rate_limit_remaining']);
+        }
+       
         return $return;
     }
 
