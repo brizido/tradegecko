@@ -26,4 +26,26 @@ trait Order
 
         return $return;
     }
+
+    public function packOrder($orderId)
+    {
+        $endpoint = 'orders/' . intval($orderId) . '/actions/pack';
+        $return = $this->post($endpoint, []);
+        if(isset($return->type) && ($return->type == 'Bad Request')) {
+            throw new TradegeckoException((string) $return->message);
+        }
+
+        return $return;
+    }
+
+    public function fulfilOrder($orderId)
+    {
+        $endpoint = 'orders/' . intval($orderId) . '/actions/fulfil';
+        $return = $this->post($endpoint, []);
+        if(isset($return->type) && ($return->type == 'Bad Request')) {
+            throw new TradegeckoException((string) $return->message);
+        }
+
+        return $return;
+    }
 }

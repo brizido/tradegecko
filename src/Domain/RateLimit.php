@@ -17,7 +17,7 @@ trait RateLimit
         if(isset($headers['x_rate_limit_remaining'])) {
             return intval($headers['x_rate_limit_remaining']);
         }
-       
+
         return $return;
     }
 
